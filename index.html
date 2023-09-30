@@ -1,299 +1,312 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177242401-1"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raja Mistri</title>
-    <meta name="description" content="A Front End Web Developer passionate about creating interactive applications and experiences on the web." />
-    <link rel="icon" type="image/x-icon" href="/assets/me/arup.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Box Icon link -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"> Developer <span>Raja.</span></a>
 
-<body>
-   <!-- Mobile menu button -->
-  
-  <div id="home" class="visuallyHidden"></div>
-  <div class="menuButton" id="menuButton" tabindex=0>
-    <div class="linesContainer">
-      <span></span>
-    </div>
-  </div>
-  <!-- Side menu -->
-  <aside class="sideMenu sideMenuShow" id="sideMenu"> 
-    <p class="logo">Raja</p>
-    <nav>
-      <ul class="navBar">
-        <li class="homeNav">
-          <a href="#home" class="navItem">
-            <i class="lni lni-home"></i>
-            <span class="navItemName">HOME</span>
-          </a>
-        </li>
-        <li class="aboutNav">
-          <a href="#about" class="navItem">
-            <i class="lni lni-user"></i>
-            <span class="navItemName">ABOUT</span>
-          </a>
-        </li>
-        <li class="skillsNav">
-          <a href="#skills" class="navItem">
-            <i class="lni lni-code-alt"></i>
-            <span class="navItemName">SKILLS</span>
-          </a>
-        </li>
-        <li class="worksNav">
-          <a href="#works" class="navItem">
-            <i class="lni lni-briefcase"></i>
-            <span class="navItemName">WORKS</span>
-          </a>
-        </li>
-        <li class="contactNav">
-          <a href="#contact" class="navItem">
-            <i class="lni lni-phone"></i>
-            <span class="navItemName">CONTACT</span>
-          </a>
-        </li>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
 
-    <div class="scrollDown" id="scrollDown">
-      <i class="lni lni-arrow-down"></i>
-      <span class="navItemName scrollDownText">Scroll Down</span>
-    </div>
-  </aside>
+      <div class="top-btnn">
+        <a href="#" class="h-btn">Contact me</a>
+      </div>
+    </header>
+    <!-- hero section -->
 
-  <!--Beginning of the wrapper -->
-  <div class="outerWrapper"> 
-    <div class="innerWrapper">
-      <!-- Header -->
-      <header>
-        <div class="heroImageContainer">
-          <img src="assets/me/arup.png" alt="A picture of Arup Mandal.">
+    <section class="hero" id="home">
+      <div class="main-content" data-aos="fade-in">
+        <h4>Hi, There!</h4>
+        <h1>I'm <span>Raja Mistri</span></h1>
+        <p>
+          I'm a Front-end Web Devloper & a UI/UX Designer with 2 years of
+          learning and 1 year of working experience. When I'm not working on
+          devlopment, you can often find me to relaxing in the hill stations.
+        </p>
+        <div class="social">
+          <a href="#"
+            ><i
+              class="ri-facebook-fill"
+              onclick="openSocialMedia('https://www.facebook.com/Myself.Raja.19')"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="ri-instagram-fill"
+              onclick="openSocialMedia('https://www.instagram.com/r__a__j____a/')"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="ri-linkedin-box-fill"
+              onclick="openSocialMedia('https://www.linkedin.com/in/rajamistri/')"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="ri-github-fill"
+              onclick="openSocialMedia('https://github.com/rajamistri')"
+            ></i
+          ></a>
         </div>
-        <div class="heroDescription">
-          <p class="greeting">HI THERE! I'M</p>
-          <h1><span>Raja</span> Mistri</h1>
-          <p class="smallBio">Learning <span>Front-End Web Development</span> passionate about creating interactive applications and experiences on the web.</p>
-          <div class="socialsResume">
-            <a class="resumeLink" href="#" alt="Arup Mandal resumé" target="_blank" rel="noopener noreferrer">Resumé</a>
-            <ul class="socialsList">
-              <li>
-                <a href="https://www.linkedin.com/in/rajamistri/" target="_blank" rel="noopener noreferrer"><i class="lni lni-linkedin-original" aria-label="Link to Alex's LinkedIn page."></i></a>
-              </li>
-              <li>
-                <a href="https://github.com/rajamistri" target="_blank" rel="noopener noreferrer"><i class="lni lni-github-original" aria-label="Link to Alex's GitHub page."></i></a>
-              </li>
-              <li>
-                <a href="https://twitter.com/#" target="_blank" rel="noopener noreferrer"><i class="lni lni-twitter-original" aria-label="Link to Alex's Twitter profile."></i></a>
-              </li>
-            </ul>
-          </div>
+        <div class="main-btn">
+          <a href="#" class="btn btn2" onclick="downloadCV()">Download CV</a>
         </div>
-      </header>
-      <!-- Beginning of Main -->
-      <main>
-        <!-- About Section -->
-        <section class="aboutSection" id="about">
-          <div class="sectionHead">
-            <span>SOME INFO</span>
-            <h2>ABOUT ME</h2>
-          </div>
-          
-          <article class="aboutContainer sectionContainer">
-            <p>I'm a Engineering Student & Learning <span>Fullstack Web Devalopment</span> I have done my Diploma In Computer Science & Technology From <span>Nalhati Government Polytechnic.</span> Now I am pursuing B.Tech From <span> Techno International New Town.</span> I am passionate about coding and solving problems through code, and I am excited to work alongside other amazing programmers and learn so much more!</p>
-          </article>
-        </section>
+      </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section class="skillsSection" id="skills">
-          <div class="sectionHead">
-            <span>CHECK OUT MY</span>
-            <h2>SKILLS</h2>
-          </div>
-        
-          <div class="skillsContainer sectionContainer">
-            <ul class="skillsGrid">
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/html.png">
-                  <p>HTML</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/css.png">
-                  <p>CSS</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/sass.png">
-                  <p>SASS</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/java-script.png">
-                  <p>Javascript</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/jquery.png">
-                  <p>JQuery</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/react.png">
-                  <p>React</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/api.png">
-                  <p>REST API</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/git.png">
-                  <p>Git</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/firebase.png">
-                  <p>Firebase</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/vscode.png">
-                  <p>VS Code</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/windows.png">
-                  <p>Windows</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/github.png">
-                  <p>GitHub</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/dns.png">
-                  <p>DNS</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img src="assets/skills/network.png">
-                  <p>Networks</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
+    <!-- About  -->
+    <section class="about" id="about">
+      <div class="about-img" data-aos="zoom-in-down">
+        <img src="Image/About.png" />
+      </div>
 
-        <!-- Works Section
-        <section class="worksSection" id="works">
-          <div class="sectionHead">
-            <span>TAKE A LOOK AT MY</span>
-            <h2>PROJECTS</h2>
-          </div>
+      <div class="about-text" data-aos="zoom-in-up">
+        <h2>
+          I am Web <span>Designer</span> <br />
+          & Front-end Developer
+        </h2>
+        <div class="exp-area">
+          <p class="exp">
+            Speciality:
+            <span>Web Designer & Front-end Developer</span>
+          </p>
+          <p class="exp">
+            Address:
+            <span>Kolkata, West Bengal</span>
+          </p>
+          <p class="exp">
+            Email:
+            <span>raja333mistri@gmail.com</span>
+          </p>
+          <p class="exp">
+            Phone:
+            <span>+91 9064977898</span>
+          </p>
+        </div>
 
-          <div class="worksContainer sectionContainer">
-            <article class="workBox">
-              <div class="workImageContainer">
-                <img src="assets/projects/Music-Player-2.0.png" alt="Music-Player-2.0 .">
-              </div>
-              <div class="workDescribeContainer">
-                <h3>Music-Player-2.0 </h3>
-                <h4>Technologies Used: <span class="techStack">JavaScript</span>, <span class="techStack">HTML</span>, <span class="techStack">CSS</span></h4>
-                <ul>
-                  <li>Completely built with HTML,CSS,JavaScript</li>
-                  <li>A Good Looking Music Player UI</li>
-                  <li>Real-time updates On Play,Puse,Forwards</li>
-                </ul>
-                <div class="workLinks">
-                  <a href="https://music-player-2-0-psi.vercel.app/" class="liveLink" target="_blank" rel="noopener noreferrer">Live</a>
-                  <a href="https://github.com/arupmandal/Music-Player-2.0" class="repoLink" target="_blank" rel="noopener noreferrer">Repo</a>
-                </div>
-              </div>
-            </article>
+        <a
+          href="#"
+          class="btn"
+          onclick="openSocialMedia('https://github.com/rajamistri?tab=repositories')"
+        >
+          View All Project</a
+        >
+      </div>
+    </section>
 
+    <!-- Service -->
 
-           
+    <section class="services" id="services">
+      <div class="center-text" data-aos="fade-down">
+        <h2>My <span>Services</span></h2>
+      </div>
 
-          </div>
-        </section> -->
+      <div class="services-content" data-aos="zoom-in-up">
+        <div class="box">
+          <img src="Image/s-1.svg" />
+          <h3>UI/UX Design</h3>
+          <p>
+            UI/UX design focuses on creating user-friendly interfaces and
+            enjoyable experiences for digital products and services.
+          </p>
+          <a href="#"> Download Now <i class="ri-arrow-right-line"></i> </a>
+        </div>
 
-        <!-- Contact Section -->
-        <section class="contactSection" id="contact">
-          <div class="sectionHead">
-            <span>SAY HELLO</span>
-            <h2>CONTACT</h2>
-          </div>
+        <div class="box">
+          <img src="Image/s-2.svg" />
+          <h3>Front-end Devlopment</h3>
+          <p>
+            Front-end web development involves creating and designing the user
+            interface and user experience of websites and web applications.
+          </p>
+          <a href="#"> Download Now <i class="ri-arrow-right-line"></i> </a>
+        </div>
 
-          <div class="contactContainer sectionContainer">
-            <h3>Get in Touch</h3>
-            <div class="contactTypes">
-              <div class="flexContainer">
-                <div class="typeBox">
-                  <i class="lni lni-envelope"></i>
-                  <a href="mailto:raja333mistri@gmail.com">raja333mistri@gmail.com</a>
-                  <p>Email Me</p>
-                </div>
-              </div>
-              <div class="flexContainer">
-                <div class="typeBox">
-                  <i class="lni lni-calendar"></i>
-                  <a href="https://calendly.com/arupmandal731/15min" target="_blank" rel="noopener noreferrer">Calendly</a>
-                  <p>Schedule a Meeting</p>
-                </div>
-              </div>
+        <div class="box">
+          <img src="Image/s-3.svg" />
+          <h3>Logo Design</h3>
+          <p>
+            Logo design is the process of creating unique and memorable visual
+            symbols to represent a brand or business.
+          </p>
+          <a href="#"> Download Now <i class="ri-arrow-right-line"></i> </a>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+      <div class="center-text" data-aos="fade-down">
+        <h2>My <span>Portfolio</span></h2>
+      </div>
+
+      <div class="Portfolio-content" data-aos="zoom-in-down">
+        <div class="row">
+          <img src="Image/port-1.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Website Design</h5>
             </div>
-            <div class="contactFormContainer">
-              <h3>Contact Form</h3>
-
-              <form id="contactForm" action="https://formspree.io/f/meqnladz" method="POST">
-                  <label for="nameInput" class="srOnly"></label>
-                  <input type="text" id="nameInput" name="nameInput" class="nameInput" required placeholder="Your Name*"/>
-                  <label for="emailInput" class="srOnly"></label>
-                  <input type="email" id="emailInput" name="emailInput" class="emailInput" required placeholder="Your Email*" />
-                  <label for="subjectInput" class="srOnly"></label>
-                  <input type="text" id="subjectInput" name="subjectInput" class="subjectInput" required placeholder="Subject*"/>
-                  <label for="messageInput" class="srOnly"></label>
-                  <textarea class="messageInput" name="messageInput" id="messageInput" required placeholder="Your Message*"></textarea>
-              </form>
-
-              <button type="submit" class="formSend" target="_blank" form="contactForm" rel="noopener noreferrer">SEND</button>
+            <div class="row-icon">
+              <i
+                class="ri-github-fill"
+                onclick="openSocialMedia('https://github.com/rajamistri?tab=repositories')"
+              ></i>
             </div>
-          </div> 
+          </div>
+          <h4>Personal Project <span>Car Rental Website</span></h4>
+        </div>
 
-        </section>
-      </main> <!-- End of Main -->
+        <div class="row">
+          <img src="Image/port-2.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Website Design</h5>
+            </div>
+            <div class="row-icon">
+              <i
+                class="ri-github-fill"
+                onclick="openSocialMedia('https://github.com/rajamistri?tab=repositories')"
+              ></i>
+            </div>
+          </div>
+          <h4>Practice Project <span>Gym website</span></h4>
+        </div>
+
+        <div class="row">
+          <img src="Image/port-3.jpg" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Website Design</h5>
+            </div>
+            <div class="row-icon">
+              <i
+                class="ri-github-fill"
+                onclick="openSocialMedia('https://github.com/rajamistri?tab=repositories')"
+              ></i>
+            </div>
+          </div>
+          <h4>Sample <span>Crypto exchange Website</span></h4>
+        </div>
+
+        <div class="row">
+          <img src="Image/port-4.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Website Design</h5>
+            </div>
+            <div class="row-icon">
+              <i
+                class="ri-github-fill"
+                onclick="openSocialMedia('https://github.com/rajamistri?tab=repositories')"
+              ></i>
+            </div>
+          </div>
+          <h4>Practice <span>Ecomerce Website</span></h4>
+        </div>
+
+        <div class="row">
+          <img src="Image/port-5.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Website Design</h5>
+            </div>
+            <div class="row-icon">
+              <i
+                class="ri-github-fill"
+                onclick="openSocialMedia('https://github.com/rajamistri?tab=repositories')"
+              ></i>
+            </div>
+          </div>
+          <h4>Online game <span>Tic Tac Toe</span></h4>
+        </div>
+
+        <div class="row">
+          <img src="Image/port-6.jpg" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Website Design</h5>
+            </div>
+            <div class="row-icon">
+              <i
+                class="ri-github-fill"
+                onclick="openSocialMedia('https://github.com/rajamistri?tab=repositories')"
+              ></i>
+            </div>
+          </div>
+          <h4>Sample <span>Stock exchange website</span></h4>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="center-text" data-aos="fade-down">
+        <h2>Contact <span>Me</span></h2>
+      </div>
+
+      <div class="contact-form" data-aos="zoom-in-up">
+        <form action="">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Email Aaddress" required />
+          <textarea name="" id="" cols="30" rows="10" required></textarea>
+          <input
+            type="Submit"
+            name=""
+            value="Send Message"
+            class="send-btn"
+            id="send-btn"
+            required
+          />
+        </form>
+      </div>
+    </section>
+    <!-- footer -->
+
+    <div class="footer">
+      <div class="copyright">
+        <p>2023 Raja Mistri, All Rights Reserved.</p>
+      </div>
+
+      <a href="#home" class="scroll-top">
+        <i class="ri-arrow-up-double-line"></i>
+      </a>
     </div>
-    <!-- Footer -->
-    <footer>
-      <p>&copy; Raja </p>
-    </footer>
-    <!-- Icons provided by https://lineicons.com/ -->
-  </div> <!-- End of the wrapper -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="scripts/index.js"></script>
-    <!-- Messenger Chat plugin Code -->
-    <div id="fb-root"></div>
     <script src="script.js"></script>
-</body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 300,
+        duration: 1400,
+      });
+    </script>
+  </body>
 </html>
