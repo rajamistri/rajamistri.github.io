@@ -20,13 +20,13 @@ function openSocialMedia(url) {
   window.open(url, "_blank");
 }
 
-function downloadCV() {
-  var cvUrl = "/Image/Resume.pdf";
+// function downloadCV() {
+//   var cvUrl = "/Image/Resume.pdf";
 
-  var downloadLink = document.createElement("a");
-  downloadLink.href = cvUrl;
-  downloadLink.download = "Raja's Resume.pdf";
-  document.body.appendChild(downloadLink);
-  downloadLink.click();
-  document.body.removeChild(downloadLink);
-}
+//   var downloadLink = document.createElement("a");
+//   downloadLink.href = cvUrl;
+//   downloadLink.download = "Raja's Resume.pdf";
+//   document.body.appendChild(downloadLink);
+//   downloadLink.click();
+//   document.body.removeChild(downloadLink);
+// }
