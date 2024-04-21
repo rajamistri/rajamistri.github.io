@@ -12,6 +12,13 @@ menu.onclick = () => {
   navlist.classList.toggle("active");
 };
 
+// Arrow function version of redirectToLink
+const redirectToLink = (linkUrl) => {
+    // Navigate to the specified link URL
+    window.location.href = linkUrl;
+};
+
+
 window.onscroll = () => {
   menu.remove.toggle("bx-x");
   navlist.remove.toggle("active");
