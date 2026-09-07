@@ -1665,6 +1665,34 @@
             box-shadow: 0 8px 30px rgba(108, 99, 255, 0.3);
         }
 
+        .form-result{
+    display:none;
+    margin-top:18px;
+    padding:14px 16px;
+    border-radius:8px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.form-result.success{
+    display:block;
+    color:#166534;
+    background:#dcfce7;
+    border:1px solid #86efac;
+}
+
+.form-result.error{
+    display:block;
+    color:#991b1b;
+    background:#fee2e2;
+    border:1px solid #fca5a5;
+}
+
+.form-submit:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+}
+
         /* ===== FOOTER ===== */
         .footer {
             padding: 60px 40px 30px;
