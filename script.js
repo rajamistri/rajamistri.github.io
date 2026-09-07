@@ -269,6 +269,87 @@
             }, 1500);
         });
 
+        const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", async function (e) {
+
+        e.preventDefault();
+
+        const submitBtn = document.getElementById("submitBtn");
+        const formResult = document.getElementById("formResult");
+
+        const originalButtonText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+            <i class="fas fa-spinner fa-spin"></i>
+            <span>Sending...</span>
+        `;
+
+        formResult.style.display = "block";
+        formResult.className = "form-result";
+        formResult.textContent = "Please wait...";
+
+        try {
+
+            const formData = new FormData(contactForm);
+
+            const response = await fetch(
+                "https://api.web3forms.com/submit",
+                {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/json"
+                    },
+                    body: formData
+                }
+            );
+
+            const result = await response.json();
+
+            console.log("Web3Forms response:", result);
+
+            if (response.ok && result.success) {
+
+                formResult.classList.add("success");
+                formResult.textContent =
+                    "Thank you! Your message has been sent successfully.";
+
+                contactForm.reset();
+
+            } else {
+
+                formResult.classList.add("error");
+
+                formResult.textContent =
+                    result.message ||
+                    "Something went wrong. Please try again.";
+
+                console.error("Web3Forms error:", result);
+            }
+
+        } catch (error) {
+
+            console.error("Form submission error:", error);
+
+            formResult.classList.add("error");
+
+            formResult.textContent =
+                "Unable to send your message. Please try again later.";
+
+        } finally {
+
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalButtonText;
+
+        }
+
+    });
+
+}
+
         // ===== TILT EFFECT ON PROJECT CARDS =====
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
